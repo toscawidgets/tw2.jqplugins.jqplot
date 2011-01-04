@@ -1,4 +1,2 @@
-_jqgrid_version_    = '3.8.3-dev-patched'
-_jqgrid_name_       = 'jqGrid'
-_jqgrid_css_basename_   = 'ui.jqgrid'
-_jqgrid_locale_     = 'en'
+_jqplot_version_    = '0.9.7r635'
+_jqplot_name_       = 'jqplot'
