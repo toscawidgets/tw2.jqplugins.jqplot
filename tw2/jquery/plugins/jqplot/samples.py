@@ -68,7 +68,7 @@ class DemoPollingJQPlotWidget(PollingJQPlotWidget):
         self.resources.append(dateAxisRenderer_js)
         super(DemoPollingJQPlotWidget, self).prepare()
 
-    url = '/some_url/'
+    url = '/jqplot_datasource/'
     url_kwargs = {}
     interval = 2000
 
@@ -105,6 +105,6 @@ class DemoPollingJQPlotWidget(PollingJQPlotWidget):
 # Register the widget's controller
 import tw2.core as twc
 mw = twc.core.request_local()['middleware']
-mw.controllers.register(DemoPollingJQPlotWidget, 'some_url')
+mw.controllers.register(DemoPollingJQPlotWidget, 'jqplot_datasource')
 
 
