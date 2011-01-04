@@ -4,8 +4,7 @@
 <script type="text/javascript">
 $(document).ready(
     function(){
-		$.jqplot.config.enablePlugins = true;
-		$.jqplot(
+		doJQPlotWidget(
 			'${w.selector}',
 			${w._data},
 			${w._options}

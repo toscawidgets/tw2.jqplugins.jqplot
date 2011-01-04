@@ -16,11 +16,13 @@ _pager_defaults = {'enableSearch': True, 'enableClear': True, 'gridModel': True}
 import formencode as fe
 import formencode.validators as fv
 
+
+
 class JQPlotWidget(tw2_jq_ui.JQueryUIWidget):
     resources = [
         tw2.jquery.jquery_js,
         tw2_jq_ui.jquery_ui_js, tw2_jq_ui.jquery_ui_css,
-        base.jqplot_js, base.jqplot_css,
+        base.jqplot_js, base.jqplot_css, base.jqplot_utils_js,
     ]
     template = "tw2.jquery.plugins.jqplot.templates.jqplot"
 
@@ -34,6 +36,7 @@ class JQPlotWidget(tw2_jq_ui.JQueryUIWidget):
 
 class PollingJQPlotWidget(JQPlotWidget):
     template = "tw2.jquery.plugins.jqplot.templates.pollster"
+
     url = twc.Param("(string) A url to poll")
     url_kwargs = twc.Param("(dict) A dict for a query str", default={})
     interval = twc.Param("(int) milliseconds between pulls", default=0)

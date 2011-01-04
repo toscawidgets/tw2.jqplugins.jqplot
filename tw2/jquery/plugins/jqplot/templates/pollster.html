@@ -1,7 +1,6 @@
-<%namespace name="tw" module="tw2.core.mako_util"/>
-<div>
-<div ${tw.attrs(attrs=w.attrs)}></div>
-<script type="text/javascript">
+<div xmlns:py="http://genshi.edgewall.org/">
+  <div py:attrs="w.attrs" ></div>
+  <script type="text/javascript">
     $(document).ready(
       function(){
         doPollingJQPlotWidget(
@@ -16,9 +15,9 @@
           // url_kwargs
           ${w.url_kwargs},
           // interval
-          ${str(w.interval)}
+          ${w.interval}
         );
       }
     );
-</script>
+  </script>
 </div>

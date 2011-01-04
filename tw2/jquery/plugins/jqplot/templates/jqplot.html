@@ -1,0 +1,14 @@
+<div xmlns:py="http://genshi.edgewall.org/">
+  <div py:attrs="w.attrs" ></div>
+  <script type="text/javascript">
+    $(document).ready(
+      function(){
+        doJQPlotWidget(
+          '${w.selector}',
+          ${w._data},
+          ${w._options}
+        );
+      }
+    );
+  </script>
+</div>

@@ -16,6 +16,11 @@ jqplot_js = twjq_c.jQueryPluginJSLink(
     modname='tw2.jquery.plugins.jqplot',
     subdir = '',
 )
+jqplot_utils_js = twc.JSLink(
+    modname='tw2.jquery.plugins.jqplot',
+    filename='static/js/jqplot-utils.js',
+)
+
 
 class JQPlotPluginJSLink(twjq_c.jQueryPluginJSLink):
     jqplugin = twc.Param('(string) Name of the jqplot plugin')
@@ -32,7 +37,7 @@ class JQPlotPluginJSLink(twjq_c.jQueryPluginJSLink):
         subs.update(dict(jqplugin=self.jqplugin))
         return subs
 
-__all__ = ['jqplot_js', 'jqplot_css']
+__all__ = ['jqplot_js', 'jqplot_css', 'jqplot_utils_js']
 
 jqplugins = [
     'barRenderer',
