@@ -28,6 +28,6 @@ class JQPlotWidget(tw2_jq_ui.JQueryUIWidget):
     options = twc.Param("Configuration options to pass to jqplot", default={})
 
     def prepare(self):
-        super(JQPlotWidget, self).prepare()
         self._data = encoder.encode(self.data)
         self._options = encoder.encode(self.options)
+        super(JQPlotWidget, self).prepare()
