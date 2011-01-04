@@ -40,6 +40,7 @@ class DemoJQPlotWidget(JQPlotWidget):
 
     data = data
     options = {
+        'legend' : { 'show' : True },
         'title' : 'Sine of the times (tw2)',
         'series' : [ {'showMarker' : False} for d in data ],
         'axes' : {
