@@ -10,18 +10,17 @@ _extra_genshi = ["Genshi >= 0.3.5"]
 _extra_mako = ["Mako >= 0.1.1"]
 
 setup(
-    name='tw2.jquery.plugins.jqgrid',
+    name='tw2.jquery.plugins.jqplot',
     version='2.0b7',
     description='toscawidgets2 wrapper for the jQuery grid plugin',
     long_description=long_description,
     author='Ralph Bean',
     author_email='ralph.bean@gmail.com',
     license='MIT',
-    url='http://github.com/ralphbean/tw2.jquery.plugins.jqgrid',
+    url='http://github.com/ralphbean/tw2.jquery.plugins.jqplot',
     install_requires=[
         "tw2.core>=2.0b2",
         "tw2.jquery",
-        "tw2.jquery.plugins.ui>=2.0b7",
         ],
     extras_require = {
         'genshi': _extra_genshi,
@@ -36,7 +35,7 @@ setup(
     entry_points="""
         [tw2.widgets]
         # Register your widgets so they can be listed in the WidgetBrowser
-        widgets = tw2.jquery.plugins.jqgrid
+        widgets = tw2.jquery.plugins.jqplot
     """,
     keywords = [
         'toscawidgets.widgets',
