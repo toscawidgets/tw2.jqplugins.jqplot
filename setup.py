@@ -11,8 +11,8 @@ _extra_mako = ["Mako >= 0.1.1"]
 
 setup(
     name='tw2.jquery.plugins.jqplot',
-    version='2.0b7',
-    description='toscawidgets2 wrapper for the jQuery grid plugin',
+    version='2.0b1',
+    description='toscawidgets2 wrapper for the jqPlot jQuery plugin',
     long_description=long_description,
     author='Ralph Bean',
     author_email='ralph.bean@gmail.com',
