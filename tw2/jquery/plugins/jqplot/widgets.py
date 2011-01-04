@@ -23,7 +23,7 @@ class JQPlotWidget(tw2_jq_ui.JQueryUIWidget):
         base.jqplot_js, base.jqplot_css,
     ]
     template = "tw2.jquery.plugins.jqplot.templates.jqplot"
-  
+
     data = twc.Param("A list of list of tuples to plot.", default=[])
     options = twc.Param("Configuration options to pass to jqplot", default={})
 
@@ -31,3 +31,13 @@ class JQPlotWidget(tw2_jq_ui.JQueryUIWidget):
         self._data = encoder.encode(self.data)
         self._options = encoder.encode(self.options)
         super(JQPlotWidget, self).prepare()
+
+class PollingJQPlotWidget(JQPlotWidget):
+    template = "tw2.jquery.plugins.jqplot.templates.pollster"
+    url = twc.Param("(string) A url to poll")
+    url_kwargs = twc.Param("(dict) A dict for a query str", default={})
+    interval = twc.Param("(int) milliseconds between pulls", default=0)
+
+    def prepare(self):
+        self.url_kwargs = encoder.encode(self.url_kwargs)
+        super(PollingJQPlotWidget, self).prepare()
