@@ -5,16 +5,9 @@ function doJQPlotWidget(sel, data, options){
         $.jqplot(sel, data, options);
 }
 
-function doPollingJQPlotWidget(sel, data, options, url, url_kwargs, interval){
-        $.jqplot.config.enablePlugins = true;
-
-        // Setup our initial plot
-        var the_plot_thickens = $.jqplot(sel, data, options);
-
-        // Setup our callback function
-        callback = function (json) {
-                pl = the_plot_thickens;
-
+// closure
+function make_jqplot_async_callback(pl) {
+        return function (json) {
                 for ( _i = 0; _i < json.data.length; _i++ ) {
                         pl.series[_i].data = json.data[_i] ;
                 }
@@ -32,6 +25,15 @@ function doPollingJQPlotWidget(sel, data, options, url, url_kwargs, interval){
                 }
                 pl.redraw();
         };
+}
+
+function doPollingJQPlotWidget(sel, data, options, url, url_kwargs, interval){
+        $.jqplot.config.enablePlugins = true;
+
+        // Setup our initial plot
+        var the_plot_thickens = $.jqplot(sel, data, options);
+
+        var callback = make_jqplot_async_callback(the_plot_thickens);
 
         // Finally make the JSON call
         $.getJSON(url, url_kwargs, callback);
