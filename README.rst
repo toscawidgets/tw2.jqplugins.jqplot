@@ -1,4 +1,4 @@
-tw2.jquery.plugins.jqplot
+tw2.jqplugins.jqplot
 =========================
 
 :Author: Ralph Bean <ralph.bean@gmail.com>
@@ -8,18 +8,18 @@ tw2.jquery.plugins.jqplot
 .. _toscawidgets2 (tw2): http://toscawidgets.org/documentation/tw2.core/
 .. _jqPlot: http://www.jqplot.com/
 
-tw2.jquery.plugins.jqplot is a `toscawidgets2 (tw2)`_ wrapper for `jqPlot`_.
+tw2.jqplugins.jqplot is a `toscawidgets2 (tw2)`_ wrapper for `jqPlot`_.
 
 Live Demo
 ---------
-Peep the `live demonstration <http://craftsman.rc.rit.edu/module?module=tw2.jquery.plugins.jqplot>`_.
+Peep the `live demonstration <http://craftsman.rc.rit.edu/module?module=tw2.jqplugins.jqplot>`_.
 
 Links
 -----
-Get the `source from github <http://github.com/ralphbean/tw2.jquery.plugins.jqplot>`_.
+Get the `source from github <http://github.com/ralphbean/tw2.jqplugins.jqplot>`_.
 
-`PyPI page <http://pypi.python.org/pypi/tw2.jquery.plugins.jqplot>`_
-and `bugs <http://github.com/ralphbean/tw2.jquery.plugins.jqplot/issues/>`_
+`PyPI page <http://pypi.python.org/pypi/tw2.jqplugins.jqplot>`_
+and `bugs <http://github.com/ralphbean/tw2.jqplugins.jqplot/issues/>`_
 
 Description
 -----------
@@ -33,5 +33,5 @@ flexible, reliable, documented, performant, and as simple as possible.
 `jqPlot`_ is a plotting and charting plugin for the jQuery Javascript
 framework. `jqPlot`_ produces beautiful line, bar and pie charts.
 
-This module, tw2.jquery.plugins.jqplot, provides `toscawidgets2 (tw2)`_ access
+This module, tw2.jqplugins.jqplot, provides `toscawidgets2 (tw2)`_ access
 to `jqPlot`_ widgets.

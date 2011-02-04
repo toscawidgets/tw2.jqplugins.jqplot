@@ -6,18 +6,18 @@ import defaults
 jqplot_css = twjq_c.jQueryPluginCSSLink(
     name=defaults._jqplot_name_,
     version = defaults._jqplot_version_,
-    modname = 'tw2.jquery.plugins.jqplot',
+    modname = 'tw2.jqplugins.jqplot',
     subdir = '',
 )
 jqplot_js = twjq_c.jQueryPluginJSLink(
     name=defaults._jqplot_name_,
     version=defaults._jqplot_version_,
     variant='min',
-    modname='tw2.jquery.plugins.jqplot',
+    modname='tw2.jqplugins.jqplot',
     subdir = '',
 )
 jqplot_utils_js = twc.JSLink(
-    modname='tw2.jquery.plugins.jqplot',
+    modname='tw2.jqplugins.jqplot',
     filename='static/js/jqplot-utils.js',
 )
 
@@ -27,7 +27,7 @@ class JQPlotPluginJSLink(twjq_c.jQueryPluginJSLink):
     name=defaults._jqplot_name_
     version=defaults._jqplot_version_
     variant='min'
-    modname='tw2.jquery.plugins.jqplot'
+    modname='tw2.jqplugins.jqplot'
     basename='jqplot.%(jqplugin)s'
     subdir = 'plugins'
 

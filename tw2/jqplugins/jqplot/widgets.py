@@ -5,7 +5,7 @@ from tw2.core.resources import encoder
 import tw2.core as twc
 
 import tw2.jquery
-import tw2.jquery.plugins.ui.base as tw2_jq_ui
+import tw2.jqplugins.ui.base as tw2_jq_ui
 
 import base
 
@@ -18,7 +18,7 @@ class JQPlotWidget(tw2_jq_ui.JQueryUIWidget):
         tw2_jq_ui.jquery_ui_js, tw2_jq_ui.jquery_ui_css,
         base.jqplot_js, base.jqplot_css, base.jqplot_utils_js,
     ]
-    template = "tw2.jquery.plugins.jqplot.templates.jqplot"
+    template = "tw2.jqplugins.jqplot.templates.jqplot"
 
     data = twc.Param("A list of list of tuples to plot.", default=[])
     options = twc.Param("Configuration options to pass to jqplot", default={})
@@ -29,7 +29,7 @@ class JQPlotWidget(tw2_jq_ui.JQueryUIWidget):
         super(JQPlotWidget, self).prepare()
 
 class PollingJQPlotWidget(JQPlotWidget):
-    template = "tw2.jquery.plugins.jqplot.templates.pollster"
+    template = "tw2.jqplugins.jqplot.templates.pollster"
 
     url = twc.Param("(string) A url to poll")
     url_kwargs = twc.Param("(dict) A dict for a query str", default={})
