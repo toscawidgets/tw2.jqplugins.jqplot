@@ -16,10 +16,10 @@ Peep the `live demonstration <http://tw2-demos.threebean.org/module?module=tw2.j
 
 Links
 -----
-Get the `source from github <http://github.com/ralphbean/tw2.jqplugins.jqplot>`_.
+Get the `source from github <http://github.com/toscawidgets/tw2.jqplugins.jqplot>`_.
 
 `PyPI page <http://pypi.python.org/pypi/tw2.jqplugins.jqplot>`_
-and `bugs <http://github.com/ralphbean/tw2.jqplugins.jqplot/issues/>`_
+and `bugs <http://github.com/toscawidgets/tw2.jqplugins.jqplot/issues/>`_
 
 Description
 -----------
@@ -35,3 +35,22 @@ framework. `jqPlot`_ produces beautiful line, bar and pie charts.
 
 This module, tw2.jqplugins.jqplot, provides `toscawidgets2 (tw2)`_ access
 to `jqPlot`_ widgets.
+
+Sampling tw2.jqplugins.jqplot in the WidgetBrowser
+--------------------------------------------------
+
+The best way to scope out ``tw2.jqplugins.jqplot`` is to load its widgets in the
+``tw2.devtools`` WidgetBrowser.  To see the source code that configures them,
+check out ``tw2.jqplugins.jqplot/tw2/jqplugins/jqplot/samples.py``
+
+To give it a try you'll need git, python, and `virtualenvwrapper
+<http://pypi.python.org/pypi/virtualenvwrapper>`_.  Run::
+
+    $ git clone git://github.com/toscawidgets/tw2.jqplugins.jqplot.git
+    $ cd tw2.jqplugins.jqplot
+    $ mkvirtualenv tw2.jqplugins.jqplot
+    (tw2.jqplugins.jqplot) $ pip install tw2.devtools
+    (tw2.jqplugins.jqplot) $ python setup.py develop
+    (tw2.jqplugins.jqplot) $ paster tw2.browser
+
+...and browse to http://localhost:8000/ to check it out.
