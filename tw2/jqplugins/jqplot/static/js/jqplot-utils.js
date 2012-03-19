@@ -28,12 +28,15 @@ function make_jqplot_async_callback(pl) {
 }
 
 function doPollingJQPlotWidget(sel, data, options, url, url_kwargs, interval){
+    if (typeof(window._tw2_jqplots)=='undefined') window._tw2_jqplots = {};
+
     $.jqplot.config.enablePlugins = true;
 
     // Setup our initial plot
     var the_plot_thickens = $.jqplot(sel, data, options);
 
     var callback = make_jqplot_async_callback(the_plot_thickens);
+    window._tw2_jqplots[sel] = callback;
 
     // Finally make the JSON call
     $.getJSON(url, url_kwargs, callback);
