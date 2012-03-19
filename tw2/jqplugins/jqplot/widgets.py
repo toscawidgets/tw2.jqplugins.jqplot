@@ -31,7 +31,7 @@ class JQPlotWidget(tw2_jq_ui.JQueryUIWidget):
 class PollingJQPlotWidget(JQPlotWidget):
     template = "tw2.jqplugins.jqplot.templates.pollster"
 
-    url = twc.Param("(string) A url to poll")
+    url = twc.Param("(string) A url to poll", default='')
     url_kwargs = twc.Param("(dict) A dict for a query str", default={})
     interval = twc.Param("(int) milliseconds between pulls", default=0)
 
