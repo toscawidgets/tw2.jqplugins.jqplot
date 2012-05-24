@@ -13,6 +13,10 @@ _pager_defaults = {'enableSearch': True, 'enableClear': True, 'gridModel': True}
 
 
 class JQPlotWidget(tw2_jq_ui.JQueryUIWidget):
+    width = twc.Param("Width of the chart.", default="550px")
+    height = twc.Param("Height of the chart.", default="300px")
+    style = twc.Variable(attribute=True)
+
     resources = [
         tw2.jquery.jquery_js,
         tw2_jq_ui.jquery_ui_js, tw2_jq_ui.jquery_ui_css,
@@ -26,6 +30,7 @@ class JQPlotWidget(tw2_jq_ui.JQueryUIWidget):
     def prepare(self):
         self._data = encoder.encode(self.data)
         self._options = encoder.encode(self.options)
+        self.style = "width:%s;height:%s;" % (self.width, self.height)
         super(JQPlotWidget, self).prepare()
 
 class PollingJQPlotWidget(JQPlotWidget):
