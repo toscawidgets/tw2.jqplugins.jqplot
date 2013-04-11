@@ -8,13 +8,13 @@
           // selector
           '${w.selector}',
           // data
-          ${w._data},
+          ${w._data | n},
           // options
-          ${w._options},
+          ${w._options | n},
           // url
           '${w.url}',
           // url_kwargs
-          ${w.url_kwargs},
+          ${w.url_kwargs | n},
           // interval
           ${str(w.interval)}
         );
