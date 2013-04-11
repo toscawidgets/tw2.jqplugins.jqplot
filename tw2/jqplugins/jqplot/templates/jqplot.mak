@@ -6,8 +6,8 @@ $(document).ready(
     function(){
 		doJQPlotWidget(
 			'${w.selector}',
-			${w._data},
-			${w._options}
+			${w._data | n},
+			${w._options | n}
 		);
     }
 );
